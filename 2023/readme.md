@@ -22,6 +22,7 @@ If you want to test the delensning efficiency of your reconstruction results, th
 - *ali2020_sims.py*: alicpt version of plancklens.planck2018_sims.py used to read observed CMB TQU fits data.
   
 - *transfer.py*: transfer from teb dataset to tqu dataset.
+  
         python transfer.py -np 70
 
 - *cal_cinv.py*: calculate the inverse variance map to be used for inverse-variance filter
