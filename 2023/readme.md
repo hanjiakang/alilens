@@ -20,8 +20,11 @@ If you want to test the delensning efficiency of your reconstruction results, th
   where -np is an argument means number of processors.
 
 - *ali2020_sims.py*: alicpt version of plancklens.planck2018_sims.py used to read observed CMB TQU fits data.
+  
 - *transfer.py*: transfer from teb dataset to tqu dataset.
         python transfer.py -np 70
+
 - *cal_cinv.py*: calculate the inverse variance map to be used for inverse-variance filter
+
 - *delensing.py*: delensing estimation pipeline. Out put will be all.pdf for CIB-lensing cross delensing and internal.pdf for internal delensing. The data for these curves in the pdf will be saved in folder ../primordial/
   
