@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 
 #sys.path.insert(0, './')
 from one import *
-mask=hp.read_map("/disk1/home/hanjk/2022/fg4lens/masks/AliCPT_UNPfg_filled_C_1024.fits")
+mask=hp.read_map(mask_bb)
 
 #def calc_fsky(masks): # fsky calculation
 #    ret = np.ones_like(masks[0])
