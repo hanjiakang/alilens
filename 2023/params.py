@@ -38,6 +38,7 @@ sys.path.insert(0, './')
 from ali2020_sims import simsLensing
 from utils import bl_eft
 from one import *
+from constant import *
 
 
 # Data Paths
