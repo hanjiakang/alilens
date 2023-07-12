@@ -18,6 +18,8 @@ mask_apodiz=""/disk1/home/hanjk/2022/fg4lens/masks/apomask.fits"" # apodized bb 
 lib_path_48="/disk1/home/hanjk/2022/fg4lens/sims/noise_48/" #total noise of 48 module
 lib_cov_48="/disk1/home/hanjk/2022/fg4lens/sims/conv_48/" #total noise saved for covariance matrix calculation
 
+bias=44
+var=154
 
 #library that you store your teb maps as well as your finel recontruction results
 lib_cls_res='/disk1/home/hanjk/2022/runs-48/noise_residuals/TEnilc-Bcilc_proj-noise_11arcmin_sim%d.fits'
