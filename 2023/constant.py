@@ -6,7 +6,7 @@ lib_qe_keys={
           } 
 
 
-
+ALILENS = '/home/jkhan/2021/data/150hz_48data'
 
 
 #library that you store your mask
