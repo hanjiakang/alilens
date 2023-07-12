@@ -99,7 +99,7 @@ ivfs   = filt_util.library_ftl(ivfs_raw, lmax_ivf, ftl_rs, fel_rs, fbl_rs)
 
 # Shuffling dictionary.
 # ss_dict remaps idx -> idx + 1 by blocks of 60 up to 300.
-ss_dict = { k : v for k, v in zip( np.arange(nsims), np.concatenate([np.roll(range(i*60, (i+1)*60), -1) for i in range(0,5)]))}
+ss_dict = { k : v for k, v in zip( np.arange(nsims), np.concatenate([np.roll(range(i*width, (i+1)*nwidth), -1) for i in range(0,nset)]))}
 ds_dict = { k : -1 for k in range(nsims) }
 ivfs_d = filt_util.library_shuffle(ivfs, ds_dict) # always return data map
 ivfs_s = filt_util.library_shuffle(ivfs, ss_dict)
@@ -112,8 +112,8 @@ qlms_ss = qest.library_sepTP(libdir_qlms_ss, ivfs, ivfs_s, cl_len['te'], nside, 
 
 
 # qecl libraries instances
-mc_sims_bias = np.arange(60)
-mc_sims_var  = np.arange(60, 300)
+mc_sims_bias = np.arange(bias)
+mc_sims_var  = np.arange(bias, var+bias)
 
 # Only qcls_dd needs a mean-field subtraction.
 mc_sims_mf_dd = mc_sims_bias
