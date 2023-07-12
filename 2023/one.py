@@ -7,7 +7,7 @@ sys.path.insert(0, './')
 from utils import bl_eft
 from constant import *
 # Basic config
-ALILENS = '/home/jkhan/2021/data/150hz_48data'
+
 
 
 # simulation config
