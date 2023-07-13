@@ -29,3 +29,4 @@ lib_cls_con='/disk1/home/hanjk/2022/runs-48/total_residuals/tot-residual_TEnilc-
 
 #the one set of teb noise map to be used in delensing estimation
 lib_Ali_map_noise="/disk1/home/hanjk/2022/runs-48/total_residuals/tot-residual_TEnilc-Bcilc_11arcmin_sim198.fits"
+lib_Ali_map_res="/disk1/home/hanjk/2022/runs-48/noise_residuals/TEnilc-Bcilc_proj-noise_11arcmin_sim198.fits"
