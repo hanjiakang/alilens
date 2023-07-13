@@ -5,10 +5,10 @@ from lenspyx.utils import camb_clfile
 import healpy as hp, numpy as np
 import copy
 
-mask=hp.read_map("/disk1/home/hanjk/2022/fg4lens/masks/AliCPT_UNPfg_filled_C_1024.fits")
-maske=hp.read_map("/disk1/home/hanjk/2022/fg4lens/masks/apomask.fits")
-mask1=hp.read_map("/disk1/home/hanjk/2022/fg4lens/masks/AliCPT_20uKcut150_C_1024.fits")
-mask2=hp.read_map("/disk1/home/hanjk/2022/fg4lens/masks/AliCPT_UNPf_invNvar.fits")
+#mask=hp.read_map("/disk1/home/hanjk/2022/fg4lens/masks/AliCPT_UNPfg_filled_C_1024.fits")
+#maske=hp.read_map("/disk1/home/hanjk/2022/fg4lens/masks/apomask.fits")
+#mask1=hp.read_map("/disk1/home/hanjk/2022/fg4lens/masks/AliCPT_20uKcut150_C_1024.fits")
+#mask2=hp.read_map("/disk1/home/hanjk/2022/fg4lens/masks/AliCPT_UNPf_invNvar.fits")
 
 
 import sys, platform, os
