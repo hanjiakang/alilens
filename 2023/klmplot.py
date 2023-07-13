@@ -23,10 +23,10 @@ sys.path.insert(0, './')
 from one import *
 import params as par
 import bandpowers
-mask=hp.read_map("/disk1/home/hanjk/2022/fg4lens/masks/AliCPT_UNPfg_filled_C_1024.fits")
-maske=hp.read_map("/disk1/home/hanjk/2022/fg4lens/masks/apomask.fits")
-mask1=hp.read_map("/disk1/home/hanjk/2022/fg4lens/masks/AliCPT_20uKcut150_C_1024.fits")
-mask2=hp.read_map("/disk1/home/hanjk/2022/fg4lens/masks/AliCPT_UNPf_invNvar.fits")
+mask=hp.read_map(mask_bb)
+#maske=hp.read_map("/disk1/home/hanjk/2022/fg4lens/masks/apomask.fits")
+#mask1=hp.read_map("/disk1/home/hanjk/2022/fg4lens/masks/AliCPT_20uKcut150_C_1024.fits")
+#mask2=hp.read_map("/disk1/home/hanjk/2022/fg4lens/masks/AliCPT_UNPf_invNvar.fits")
 
 def calc_fsky(masks,mask): # fsky calculation
     pixarea=hp.nside2pixarea(1024)
@@ -71,7 +71,7 @@ def view_map(m,m1, title, savePath, min=None, max=None, cmap='YlGnBu_r'):
 
 
 
-mask_b = np.where(hp.read_map(os.path.join(ALILENS, 'sims/ninv/ninv_p1.fits')) > 0, 1, 0)
+mask_b = np.where(hp.read_map(os.path.join(ALILENS, 'sims/ninv/ninv_p.fits')) > 0, 1, 0)
 lmax = 2048
 q2k = lambda l: l*(l + 1) / 2 # potential -> convergence
 q2d = lambda l: (l*(l + 1)) ** 0.5 # potential -> deflection
