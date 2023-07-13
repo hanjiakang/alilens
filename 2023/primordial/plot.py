@@ -105,11 +105,11 @@ bnoi=hp.anafast(noise[2],lmax=lmax)/fsky
 datainternal1=np.load("/disk1/home/hanjk/2022/alicpt_lens/primordial/internal1.npz")
 datacib1=np.load("/disk1/home/hanjk/2022/alicpt_lens/primordial/cib1.npz")
 
-datainternal2=np.load("/disk1/home/hanjk/2022/alicpt_lens/primordial/internal2.npz")
-datacib2=np.load("/disk1/home/hanjk/2022/alicpt_lens/primordial/cib2.npz")
+#datainternal2=np.load("/disk1/home/hanjk/2022/alicpt_lens/primordial/internal2.npz")
+#datacib2=np.load("/disk1/home/hanjk/2022/alicpt_lens/primordial/cib2.npz")
 
-datainternal3=np.load("/disk1/home/hanjk/2022/alicpt_lens/primordial/internal3.npz")
-datacib3=np.load("/disk1/home/hanjk/2022/alicpt_lens/primordial/cib3.npz")
+#datainternal3=np.load("/disk1/home/hanjk/2022/alicpt_lens/primordial/internal3.npz")
+#datacib3=np.load("/disk1/home/hanjk/2022/alicpt_lens/primordial/cib3.npz")
 
 BB_delens1=datainternal1["BB_delens"]
 BB_lens1=datainternal1["BB_lens"]
@@ -117,17 +117,17 @@ BB_lens1=datainternal1["BB_lens"]
 BB_delens_cn1=datacib1["BB_delens_cn"]
 BB_lens_cn1=datacib1["BB_lens_cn"]
 
-BB_delens2=datainternal2["BB_delens"]
-BB_lens2=datainternal2["BB_lens"]
+#BB_delens2=datainternal2["BB_delens"]
+#BB_lens2=datainternal2["BB_lens"]
 
-BB_delens_cn2=datacib2["BB_delens_cn"]
-BB_lens_cn2=datacib2["BB_lens_cn"]
+#BB_delens_cn2=datacib2["BB_delens_cn"]
+#BB_lens_cn2=datacib2["BB_lens_cn"]
 
-BB_delens3=datainternal3["BB_delens"]
-BB_lens3=datainternal3["BB_lens"]
+#BB_delens3=datainternal3["BB_delens"]
+#BB_lens3=datainternal3["BB_lens"]
 
-BB_delens_cn3=datacib3["BB_delens_cn"]
-BB_lens_cn3=datacib3["BB_lens_cn"]
+#BB_delens_cn3=datacib3["BB_delens_cn"]
+#BB_lens_cn3=datacib3["BB_lens_cn"]
 
 
 
@@ -135,11 +135,11 @@ l=get_blbubc('consext8')[2]
 plt.plot(l, _get_binnedcl(ell*(ell+1)*(BB_delens1-bnoi[2:])/2/np.pi/1.08), color='b',linestyle="-",label=r'$C_\ell^{\rm BB,Delensed}1$')
 plt.plot(l, _get_binnedcl(ell*(ell+1)*(BB_lens1-bnoi[2:])/2/np.pi/1.08), color='b',linestyle="--",label=r'$C_\ell^{\rm BB,len}1$')
 
-plt.plot(l, _get_binnedcl(ell*(ell+1)*(BB_delens2-bnoi[2:])/2/np.pi/1.08), color='r',linestyle="-",label=r'$C_\ell^{\rm BB,Delensed}2$')
-plt.plot(l, _get_binnedcl(ell*(ell+1)*(BB_lens2-bnoi[2:])/2/np.pi/1.08),color='r',linestyle="--",label=r'$C_\ell^{\rm BB,len}2$')
+#plt.plot(l, _get_binnedcl(ell*(ell+1)*(BB_delens2-bnoi[2:])/2/np.pi/1.08), color='r',linestyle="-",label=r'$C_\ell^{\rm BB,Delensed}2$')
+#plt.plot(l, _get_binnedcl(ell*(ell+1)*(BB_lens2-bnoi[2:])/2/np.pi/1.08),color='r',linestyle="--",label=r'$C_\ell^{\rm BB,len}2$')
 
-plt.plot(l, _get_binnedcl(ell*(ell+1)*(BB_delens3-bnoi[2:])/2/np.pi/1.08), color='g',linestyle="-",label=r'$C_\ell^{\rm BB,Delensed}3$')
-plt.plot(l, _get_binnedcl(ell*(ell+1)*(BB_lens3-bnoi[2:])/2/np.pi/1.08), color='g',linestyle="--",label=r'$C_\ell^{\rm BB,len}3$')
+#plt.plot(l, _get_binnedcl(ell*(ell+1)*(BB_delens3-bnoi[2:])/2/np.pi/1.08), color='g',linestyle="-",label=r'$C_\ell^{\rm BB,Delensed}3$')
+#plt.plot(l, _get_binnedcl(ell*(ell+1)*(BB_lens3-bnoi[2:])/2/np.pi/1.08), color='g',linestyle="--",label=r'$C_\ell^{\rm BB,len}3$')
 #plt.plot(ell, ell*(ell+1)*cl_len['bb'][ell]/2/np.pi, label=r'$C_\ell^{\rm BB,theory}$')
 #plt.plot(ell, ell*(ell+1)*bnoi[2:]/2/np/pi)
 #plt.plot(ell, hp.anafast(Ali_map_noise[2])[ell]/(np.e**(-ell*(ell+1)*(11/180./60.*np.pi)**2/16/np.log(2)))**2, label=r'$Noise$')
@@ -180,11 +180,11 @@ l=get_blbubc('consext8')[2]
 plt.plot(l, _get_binnedcl(ell*(ell+1)*(BB_delens_cn1-1.1*bnoi[2:])/2/np.pi),color='b',linestyle='-', label=r'$C_\ell^{\rm BB,Delensed}$')
 plt.plot(l, _get_binnedcl(ell*(ell+1)*(BB_lens_cn1-bnoi[2:])/2/np.pi),color='b', linestyle='--',label=r'$C_\ell^{\rm BB,len}$')
 
-plt.plot(l, _get_binnedcl(ell*(ell+1)*(BB_delens_cn2-1.1*bnoi[2:])/2/np.pi),color='r',linestyle='-', label=r'$C_\ell^{\rm BB,Delensed}$')
-plt.plot(l, _get_binnedcl(ell*(ell+1)*(BB_lens_cn2-bnoi[2:])/2/np.pi),color='r', linestyle='--',label=r'$C_\ell^{\rm BB,len}$')
+#plt.plot(l, _get_binnedcl(ell*(ell+1)*(BB_delens_cn2-1.1*bnoi[2:])/2/np.pi),color='r',linestyle='-', label=r'$C_\ell^{\rm BB,Delensed}$')
+#plt.plot(l, _get_binnedcl(ell*(ell+1)*(BB_lens_cn2-bnoi[2:])/2/np.pi),color='r', linestyle='--',label=r'$C_\ell^{\rm BB,len}$')
 
-plt.plot(l, _get_binnedcl(ell*(ell+1)*(BB_delens_cn3-1.1*bnoi[2:])/2/np.pi),color='g',linestyle='-', label=r'$C_\ell^{\rm BB,Delensed}$')
-plt.plot(l, _get_binnedcl(ell*(ell+1)*(BB_lens_cn3-bnoi[2:])/2/np.pi), color='g', linestyle='--',label=r'$C_\ell^{\rm BB,len}$')
+#plt.plot(l, _get_binnedcl(ell*(ell+1)*(BB_delens_cn3-1.1*bnoi[2:])/2/np.pi),color='g',linestyle='-', label=r'$C_\ell^{\rm BB,Delensed}$')
+#plt.plot(l, _get_binnedcl(ell*(ell+1)*(BB_lens_cn3-bnoi[2:])/2/np.pi), color='g', linestyle='--',label=r'$C_\ell^{\rm BB,len}$')
 
 #plt.plot(ell, cl_len['bb'][ell], label=r'$C_\ell^{\rm BB,theory}$')
 
@@ -218,23 +218,23 @@ plt.close()
 
 
 C1=np.load("/disk1/home/hanjk/2022/alicpt_lens/primordial/cro1.npz")['arr_0']
-C2=np.load("/disk1/home/hanjk/2022/alicpt_lens/primordial/cro2.npz")['arr_0']
-C3=np.load("/disk1/home/hanjk/2022/alicpt_lens/primordial/cro3.npz")['arr_0']
+#C2=np.load("/disk1/home/hanjk/2022/alicpt_lens/primordial/cro2.npz")['arr_0']
+#C3=np.load("/disk1/home/hanjk/2022/alicpt_lens/primordial/cro3.npz")['arr_0']
 #print(sorted(C1.files))
 #plt.plot(l, C1,label=r'$CIB-cross1$')
 #plt.plot(l, C2,label=r'$CIB-cross2$')
 #plt.plot(l, C3,label=r'$CIB-cross3$')
 
 plt.plot(l, _get_binnedcl(C1),label=r'$CIB-cross1$')
-plt.plot(l, _get_binnedcl(C2),label=r'$CIB-cross2$')
-plt.plot(l, _get_binnedcl(C3),label=r'$CIB-cross3$')
+#plt.plot(l, _get_binnedcl(C2),label=r'$CIB-cross2$')
+#plt.plot(l, _get_binnedcl(C3),label=r'$CIB-cross3$')
 
 I1=np.load("/disk1/home/hanjk/2022/alicpt_lens/primordial/in1.npz")['arr_0']
-I2=np.load("/disk1/home/hanjk/2022/alicpt_lens/primordial/in2.npz")['arr_0']
-I3=np.load("/disk1/home/hanjk/2022/alicpt_lens/primordial/in3.npz")['arr_0']
+#I2=np.load("/disk1/home/hanjk/2022/alicpt_lens/primordial/in2.npz")['arr_0']
+#I3=np.load("/disk1/home/hanjk/2022/alicpt_lens/primordial/in3.npz")['arr_0']
 plt.plot(l, _get_binnedcl(I1),label=r'$Internal1$')
-plt.plot(l, _get_binnedcl(I2),label=r'$Internal2$')
-plt.plot(l, _get_binnedcl(I3),label=r'$Internal3$')
+#plt.plot(l, _get_binnedcl(I2),label=r'$Internal2$')
+#plt.plot(l, _get_binnedcl(I3),label=r'$Internal3$')
 
 plt.xlabel(r'$\ell$')
 plt.ylabel(r'$\rho^2_{\ell}$')
