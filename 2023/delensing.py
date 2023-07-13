@@ -211,7 +211,7 @@ Nmap = np.random.normal(0, noise_level, len(Tmap0))
 
 BB_delens=hp.anafast(Bmap_delens,lmax=lmax+dlmax)[ell]/(np.e**(-ell*(ell+1)*(11/180./60.*np.pi)**2/16/np.log(2)))**2/fsky
 BB_lens=1.05*hp.anafast(Bmap)[ell]/(np.e**(-ell*(ell+1)*(11/180./60.*np.pi)**2/16/np.log(2)))**2/fsky
-np.savez("/disk1/home/hanjk/2022/alicpt_lens/primordial/internal",BB_delens=BB_delens,BB_lens=BB_lens)
+np.savez("/disk1/home/hanjk/2022/alicpt_lens/primordial/internal1",BB_delens=BB_delens,BB_lens=BB_lens)
 #plt.plot(ell, hp.alm2cl(blm_len)[ell], label=r'$\hat{C}_\ell^{\rm BB}$')
 #plt.plot(ell, hp.alm2cl(blm_len_cn)[ell]/fsky, label=r'$\hat C_\ell^{\rm BB,cib}$')
 #plt.plot(ell, hp.anafast(hp.smoothing(hp.alm2map(blm_len,nside=nside), fwhm=11./60/180.*np.pi)*mask,lmax=lmax+dlmax)[ell]/(np.e**(-ell*(ell+1)*(10.4/180./60.*np.pi)**2/16/np.log(2)))**2, label=r'$C_\ell^{\rm BB,lensed}$')
@@ -244,7 +244,7 @@ plt.close()
 
 BB_delens_cn=hp.anafast(Bmap_delens_cn,lmax=lmax+dlmax)[ell]/(np.e**(-ell*(ell+1)*(11/180./60.*np.pi)**2/16/np.log(2)))**2/fsky
 BB_lens_cn=hp.anafast(Bmap_cn)[ell]/(np.e**(-ell*(ell+1)*(11.7/180./60.*np.pi)**2/16/np.log(2)))**2/fsky
-np.savez("/disk1/home/hanjk/2022/alicpt_lens/primordial/cib",BB_delens_cn=BB_delens_cn,BB_lens_cn=BB_lens_cn)
+np.savez("/disk1/home/hanjk/2022/alicpt_lens/primordial/cib1",BB_delens_cn=BB_delens_cn,BB_lens_cn=BB_lens_cn)
 #plt.plot(ell, hp.alm2cl(blm_len_cn)[ell], label=r'$\hat{C}_\ell^{\rm BB}$')
 #plt.plot(ell, hp.alm2cl(blm_len)[ell]/fsky, label=r'$\hat C_\ell^{\rm BB,phi}$')
 #plt.plot(ell, hp.alm2cl(blm_len_cn)[ell]/fsky, label=r'$\hat C_\ell^{\rm BB,cib}$')
@@ -286,12 +286,12 @@ C_BB  = hp.anafast(Bmap_cn,lmax=lmax+dlmax)[ell]/(np.e**(-ell*(ell+1)*(11/180./6
 C_re  = hp.anafast(hp.smoothing(hp.alm2map(blm_len_cn,nside=nside), fwhm=11./60/180.*np.pi)*mask,lmax=lmax+dlmax)[ell]/(np.e**(-ell*(ell+1)*(11/180./60.*np.pi)**2/16/np.log(2)))**2/fsky
 
 plt.plot(l, _get_binnedcl(C_cro**2/C_BB/C_re),label=r'$CIB-cross$')
-np.savez("/disk1/home/hanjk/2022/alicpt_lens/primordial/cro",C_cro**2/C_BB/C_re)
+np.savez("/disk1/home/hanjk/2022/alicpt_lens/primordial/cro1",C_cro**2/C_BB/C_re)
 C_cro = hp.anafast(Bmap,hp.smoothing(hp.alm2map(blm_len,nside=nside), fwhm=11./60/180.*np.pi)*mask,lmax=lmax+dlmax)[ell]/(np.e**(-ell*(ell+1)*(11/180./60.*np.pi)**2/16/np.log(2)))**2/fsky
 C_BB  = hp.anafast(Bmap,lmax=lmax+dlmax)[ell]/(np.e**(-ell*(ell+1)*(11/180./60.*np.pi)**2/16/np.log(2)))**2/fsky
 C_re  = hp.anafast(hp.smoothing(hp.alm2map(blm_len,nside=nside), fwhm=11./60/180.*np.pi)*mask,lmax=lmax+dlmax)[ell]/(np.e**(-ell*(ell+1)*(11/180./60.*np.pi)**2/16/np.log(2)))**2/fsky
 
-np.savez("/disk1/home/hanjk/2022/alicpt_lens/primordial/in",C_cro**2/C_BB/C_re)
+np.savez("/disk1/home/hanjk/2022/alicpt_lens/primordial/in1",C_cro**2/C_BB/C_re)
 plt.plot(l, _get_binnedcl(C_cro**2/C_BB/C_re),label=r'$Internal$')
 plt.xlabel(r'$\ell$')
 plt.ylabel(r'$\rho_{\ell}$')
