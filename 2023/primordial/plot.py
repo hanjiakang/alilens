@@ -100,7 +100,7 @@ cl_unl   = camb_clfile(os.path.join(cls_path, 'FFP10_wdipole_lenspotentialCls.da
 
 
 noise=hp.fitsfunc.read_map("/disk1/home/hanjk/2022/runs-48/noise_residuals/TEnilc-Bcilc_proj-noise_11arcmin_sim198.fits",field=(0,1,2))
-bnoi=1.05*hp.anafast(noise[2],lmax=lmax)/fsky
+bnoi=hp.anafast(noise[2],lmax=lmax)/fsky
 
 datainternal1=np.load("/disk1/home/hanjk/2022/alicpt_lens/primordial/internal1.npz")
 datacib1=np.load("/disk1/home/hanjk/2022/alicpt_lens/primordial/cib1.npz")
