@@ -119,7 +119,7 @@ nside = 1024
 facres = -1
 DGL   = 9.1e9
 shot  = 1200.
-noise_level0 = 15./np.sqrt(12)   # ¦ÌK-arcmin
+noise_level0 = 15./np.sqrt(12)   # Â¦ÃŒK-arcmin
 pixel_size  = (129600./np.pi/12/nside**2)**0.5*60.
 noise_level = noise_level0/pixel_size
 
@@ -130,12 +130,12 @@ cl_unl   = camb_clfile(os.path.join(cls_path, 'FFP10_wdipole_lenspotentialCls.da
 cib_spec =  np.load('cib_data.npy')
 cib_spec = cib_spec[:,:lmax + dlmax+1]
 
-Kappa = hp.fitsfunc.read_map('./delensing/input-output02.fits',field=(0,1))
+Kappa = hp.fitsfunc.read_map('./input-output.fits',field=(0,1))
 fsky = np.sum(Kappa[1]!=0)/len(Kappa[1])
 
-noise=hp.fitsfunc.read_map("/disk1/home/hanjk/2022/runs-48/noise_residuals/TEnilc-Bcilc_proj-noise_11arcmin_sim198.fits",field=(0,1,2))
+noise=hp.fitsfunc.read_map(lib_Ali_map_res,field=(0,1,2))
 bnoi=hp.anafast(noise[2],lmax=lmax)/fsky
-Ali_map_noise=hp.fitsfunc.read_map("/disk1/home/hanjk/2022/runs-48/total_residuals/tot-residual_TEnilc-Bcilc_11arcmin_sim198.fits",field=(0,1,2))
+Ali_map_noise=hp.fitsfunc.read_map(lib_Ali_map_noise,field=(0,1,2))
 #Ali_map_noise=hp.fitsfunc.read_map("/disk1/home/hanjk/lens_sims/maps/TEnilc-Bcilc_proj-noise_11arcmin_sim198.fits",field=(0,1,2))
 #Ali_map_noise=hp.fitsfunc.read_map("/disk1/home/hanjk/lens_sims/maps/tot-residual_TEnilc-Bcilc_11arcmin_sim198.fits",field=(0,1,2))
 
