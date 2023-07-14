@@ -22,7 +22,7 @@ cls_in = camb_clfile(os.path.join(cls_path, 'FFP10_wdipole_lenspotentialCls.dat'
 savePath_cmbs = os.path.join(ALILENS, 'sims', 'cmbs')
 savePath_noise = os.path.join(ALILENS, 'sims', 'noise')
 savePath_ninv = os.path.join(ALILENS, 'sims', 'ninv')
-savePath_ninv = os.path.join(ALILENS, 'sims', 'conv')
+savePath_conv = os.path.join(ALILENS, 'sims', 'conv')
 if not os.path.exists(savePath_cmbs): os.makedirs(savePath_cmbs)
 if not os.path.exists(savePath_noise): os.makedirs(savePath_noise)
 if not os.path.exists(savePath_ninv): os.makedirs(savePath_ninv)
