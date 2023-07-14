@@ -13,7 +13,7 @@ To use alilens, you will need [Plancklens](https://github.com/carronj/plancklens
 
 ### Contents
 
-This code contains most of the AliCPT lensing reconstruction pipeline (see Ali lensing paper [2022](https://arxiv.org/abs/2204.08158), [2023].(https://arxiv.org/abs/2303.05705)) Here we provide two versions corresponding to the above papers respectively:
+This code contains most of the AliCPT lensing reconstruction pipeline (see Ali lensing paper [2022](https://arxiv.org/abs/2204.08158), [2023](https://arxiv.org/abs/2303.05705).) Here we provide two versions corresponding to the above papers respectively:
 
 * 2022 version consisting of data simulation scripts, which generate skymaps with planck FPP CMB signal and instrumental noise based on AliCPT noise variance map. It calculates the lensing reconstruciton results for both 95 GHz and 150 GHz from temperature only, polarization only and MV estimators.
 * 2023 version consistiing of lensing reconstruction pipeline for polarization only estimation of pre-generated data base, which contains maps with CMB signal, instrumental noise and foreground residues after ILC fg removing method.
