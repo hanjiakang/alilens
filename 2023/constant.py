@@ -10,8 +10,8 @@ ALILENS = '/home/jkhan/2021/data/150hz_48data' #the library directory of your da
 
 
 #library that you store your mask
-mask_bb=""/disk1/home/hanjk/2022/fg4lens/masks/AliCPT_UNPfg_filled_C_1024.fits"" #bb mask
-mask_apodiz=""/disk1/home/hanjk/2022/fg4lens/masks/apomask.fits"" # apodized bb mask
+mask_bb="/disk1/home/hanjk/2022/fg4lens/masks/AliCPT_UNPfg_filled_C_1024.fits" #bb mask
+mask_apodiz="/disk1/home/hanjk/2022/fg4lens/masks/apomask.fits" # apodized bb mask
 
 
 #library that you store your 48 module noise data
