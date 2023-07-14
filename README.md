@@ -34,7 +34,7 @@ And finally, you can produce lensing reconstruction results using *plot.py* and 
 
 If you want to test the delensning efficiency of your reconstruction results, there is delensing.py which can be used to estimate the results through CIB internal delensing and CIB-lensing cross delensing.
 
-## SCRIPTS
+#### SCRIPTS
 
 - *sims.py*: alicpt lensing simulation script use Julien's lenspyx.
         
