@@ -23,11 +23,12 @@ savePath_cmbs = os.path.join(ALILENS, 'sims', 'cmbs')
 savePath_noise = os.path.join(ALILENS, 'sims', 'noise')
 savePath_ninv = os.path.join(ALILENS, 'sims', 'ninv')
 savePath_conv = os.path.join(ALILENS, 'sims', 'conv')
+savePath_res = os.path.join(ALILENS, 'sims', 'res')
 if not os.path.exists(savePath_cmbs): os.makedirs(savePath_cmbs)
 if not os.path.exists(savePath_noise): os.makedirs(savePath_noise)
 if not os.path.exists(savePath_ninv): os.makedirs(savePath_ninv)
 if not os.path.exists(savePath_conv): os.makedirs(savePath_conv)
-
+if not os.path.exists(savePath_res): os.makedirs(savePath_res)
 
 
 
