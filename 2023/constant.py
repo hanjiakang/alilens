@@ -24,7 +24,7 @@ nset=9 # the number of gourp
 width=22 # the width of each gourp (how many sets in each group) p.s. as the sets in bias wille be to calculate 2 mean field, I recommand that the group width equals to one half of bias.
 #library that you store your teb maps as well as your finel recontruction results
 
-#library that you store your teb maps as well as your finel recontruction results
+#library that you store your teb maps as well as your final recontruction results
 lib_cls_res='/disk1/home/hanjk/2022/runs-48/noise_residuals/TEnilc-Bcilc_proj-noise_11arcmin_sim%d.fits'
 lib_cls_noise='/disk1/home/hanjk/2022/runs-48/total_residuals/tot-residual_TEnilc-Bcilc_11arcmin_sim%d.fits'
 #lib_cls_con='/disk1/home/hanjk/2022/runs/total_residuals/tot-residual_TEnilc-Bcilc_11arcmin_sim%02d.fits'
