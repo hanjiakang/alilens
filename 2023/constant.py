@@ -8,6 +8,17 @@ lib_qe_keys={
 
 ALILENS = '/home/jkhan/2021/data/150hz_48data' #the library directory of your dataset and the final output
 
+nside = 1024
+lmax = 2048
+dlmax = 1024
+seeds = [_ for _ in range(199)]
+nlev = [#"/home/jkhan/2021/data/Noise_ALI_IHEP_20200730_48/I_NOISE_95_C_1024.fits",
+"/disk1/home/hanjk/Noise_ALI_IHEP_20200730/I_NOISE_150_C_1024.fits"
+        ]
+fwhm_f = [#19.
+         11.
+        ]
+
 
 #library that you store your mask
 mask_bb="/disk1/home/hanjk/2022/fg4lens/masks/AliCPT_UNPfg_filled_C_1024.fits" #bb mask
