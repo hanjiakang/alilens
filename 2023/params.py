@@ -99,7 +99,7 @@ ivfs   = filt_util.library_ftl(ivfs_raw, lmax_ivf, ftl_rs, fel_rs, fbl_rs)
 
 # Shuffling dictionary.
 # ss_dict remaps idx -> idx + 1 by blocks of 60 up to 300.
-ss_dict = { k : v for k, v in zip( np.arange(nsims), np.concatenate([np.roll(range(i*width, (i+1)*nwidth), -1) for i in range(0,nset)]))}
+ss_dict = { k : v for k, v in zip( np.arange(nsims), np.concatenate([np.roll(range(i*nwidth, (i+1)*nwidth), -1) for i in range(0,nset)]))}
 ds_dict = { k : -1 for k in range(nsims) }
 ivfs_d = filt_util.library_shuffle(ivfs, ds_dict) # always return data map
 ivfs_s = filt_util.library_shuffle(ivfs, ss_dict)
