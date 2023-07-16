@@ -20,6 +20,9 @@ lib_cov_48="/disk1/home/hanjk/2022/fg4lens/sims/conv_48/" #total noise saved for
 
 bias=44 # how many sets of CMB maps used to calculate mean field
 var=154 # how many sets of CMB maps used to calculate covariance matrix
+nset=9 # the number of gourp
+width=22 # the width of each gourp (how many sets in each group) p.s. as the sets in bias wille be to calculate 2 mean field, I recommand that the group width equals to one half of bias.
+#library that you store your teb maps as well as your finel recontruction results
 
 #library that you store your teb maps as well as your finel recontruction results
 lib_cls_res='/disk1/home/hanjk/2022/runs-48/noise_residuals/TEnilc-Bcilc_proj-noise_11arcmin_sim%d.fits'
