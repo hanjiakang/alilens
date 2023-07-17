@@ -27,7 +27,7 @@ Then, run *sims.py* to generate a serial of data sets containing lensed CMB sign
 
 After that, you can run *plot.py* and start the reconstruction of the lensing potential based on the dataset generated in the previous step.
 
-After the reconstruction process finish, there will be several graphic outputs in the ALILENS directory, among which the  *recon_cl.pdf*  is the power spectrum output and *recon_snr.pdf* is the SNR for each ell bins. Meanwhile, you can run *klmplot.py* to get a weiner filtered reconstruction potential map as well as the potnetial map input for conparison, I strongly recommand you check this reconstruction potentail map to see if the reconstruction process is carried out correctly.
+After the reconstruction process finish, there will be several graphic outputs in the ALILENS directory, among which the  *recon_cl.pdf*  is the power spectrum output and *recon_snr.pdf* is the SNR for each ell bins. Meanwhile, you can run *product.py* and then *klmplot.py* to get a weiner filtered reconstruction potential map as well as the potnetial map input for conparison, I strongly recommand you check this reconstruction potentail map to see if the reconstruction process is carried out correctly.
 
 #### SCRIPTS
 
@@ -39,8 +39,9 @@ After the reconstruction process finish, there will be several graphic outputs i
 
 - *ali2020_sims.py*: alicpt version of plancklens.planck2018_sims.py used to read observed CMB TQU fits data.
 
-- *klmplot.py*: delensing estimation pipeline. Out put will be all.pdf for CIB-lensing cross delensing and internal.pdf for internal delensing. The data for these curves in the pdf will be saved in folder ../primordial/
-- 
+- *klmplot.py*: delensing estimation pipeline. Out put will be all.pdf for CIB-lensing cross delensing and internal.pdf for internal delensing. The data for these curves in the pdf will be saved in folder ../primordial/.
+
+- *product.py*: generate reconstruction klm and semi-analytical n0 nlkk.
 ### 2023 version
 This is the 2023 version of AliCPT lensing pipline. For more details, please check out [Ali lensing paper 2023](https://arxiv.org/abs/2303.05705).
 
@@ -72,4 +73,5 @@ If you want to test the delensning efficiency of your reconstruction results, th
 
 - *cal_cinv.py*: calculate the inverse variance map to be used for inverse-variance filter
 
-- *delensing.py*: delensing estimation pipeline. Out put will be all.pdf for CIB-lensing cross delensing and internal.pdf for internal delensing. The data for these curves in the pdf will be saved in folder ../primordial/
+- *delensing.py*: delensing estimation pipeline. Out put will be all.pdf for CIB-lensing cross delensing and internal.pdf for internal delensing. The data for these curves in the pdf will be saved in folder ../primordial/.
+- - *product.py*: generate reconstruction klm and semi-analytical n0 nlkk.
