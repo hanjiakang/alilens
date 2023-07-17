@@ -2,7 +2,7 @@
 
 Python 3.9.7
 
-AliCPTlens is a python script for cosmology containning most of AliCPT CMB lensing pipeline, developed by Bin Hu, Jiakang Han, Jinyi Liu on behalf of the *AliCPT* collaboration ([publication here.](https://arxiv.org/abs/2303.05705)) This script is mostly based on [Plancklens](https://github.com/carronj/plancklens) by Julien Carron. 
+alilens is a python script for cosmology containning most of AliCPT CMB lensing pipeline, developed by Bin Hu, Jiakang Han, Jinyi Liu on behalf of the *AliCPT* collaboration ([publication here.](https://arxiv.org/abs/1710.03047)) This script is mostly based on [Plancklens](https://github.com/carronj/plancklens) by Julien Carron. 
 
 This script may be used for:
 * lensing reconstruction on *AliCPT* dataset consists of foregorund residue, CMB signal and instrumental noise
