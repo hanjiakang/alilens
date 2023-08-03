@@ -53,6 +53,10 @@ After that, I recommend you to run *sims.py* and *cal_cinv.py*, which will genra
 
 Both python files above can be accelarated using mp if you add -np (any number) at the end of the command line.
 
+*cal_cinv.py*, which calculate inverse variance map respectively.
+
+
+
 And finally, you can produce lensing reconstruction results using *plot.py* and the powerspectrum will be saved in the directory you put in the *constant.py. There will be *recon_cl.pdf*  which is the power spectrum output and *recon_snr.pdf* which is the SNR for each ell bins.
 
 If you want to test the delensning efficiency of your reconstruction results, there is *delensing.py* which can be used to estimate the results through CIB internal delensing and CIB-lensing cross delensing. You must provide a reconstruction potential map befroe you run the delensing estimation, which can be caculated using *klmplot.py*.
