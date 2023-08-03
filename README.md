@@ -51,11 +51,7 @@ Then you can run *transfer.py* to which transfer the pre-existing TEB dataset (C
 
 After that, I recommend you to run *sims.py* and *cal_cinv.py*, which will genrate realizaions of CMB signal and calculate inverse variance map respectively.
 
-Both python files above can be accelarated using mp if you add -np (any number) at the end of the command line.
-
-*cal_cinv.py*, which calculate inverse variance map respectively.
-
-
+*transfer.py* and *sims.py* can be accelarated using mp if you add -np (any number) at the end of the command line.
 
 And finally, you can produce lensing reconstruction results using *plot.py* and the powerspectrum will be saved in the directory you put in the *constant.py. There will be *recon_cl.pdf*  which is the power spectrum output and *recon_snr.pdf* which is the SNR for each ell bins.
 
