@@ -1,3 +1,15 @@
+<!---
+STYLE CONVENTION USED
+    bolt italic:
+        ***file***"
+    code:
+       `program` or `library``
+       `commands` or `paths`
+       `variable`
+    bold code:
+        **`function`**
+        **`type`** or **`structure`**
+-->
 # alilens
 
 Python 3.9.7
