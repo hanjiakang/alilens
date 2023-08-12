@@ -20,17 +20,17 @@ This script may be used for:
 * lensing reconstruction on *AliCPT* dataset consists of foregorund residue, CMB signal and instrumental noise
 * delensing based on lensing reconstruction and its cross-correlation with Cosmic Microwave Background
 
-### Requirements
+# Requirements
 To use alilens, you will need [Plancklens](https://github.com/carronj/plancklens), [lenspyx](https://github.com/carronj/lenspyx) and [healpy](https://github.com/carronj/lenspyx) installed locally. Check out their github for instructions. 
 
-### Contents
+# Contents
 
 This code contains most of the AliCPT lensing reconstruction pipeline (see Ali lensing paper [2022](https://arxiv.org/abs/2204.08158), [2023](https://arxiv.org/abs/2303.05705).) Here we provide two versions corresponding to the above papers respectively:
 
 * 2022 version consisting of data simulation scripts, which generate skymaps with planck FPP CMB signal and instrumental noise based on AliCPT noise variance map. It calculates the lensing reconstruciton results for both 95 GHz and 150 GHz from temperature only, polarization only and MV estimators.
 * 2023 version consistiing of lensing reconstruction pipeline for polarization only estimation of pre-generated data base, which contains maps with CMB signal, instrumental noise and foreground residues after ILC fg removing method.
 
-### 2022 version
+# 2022 version
 This is the 2022 version of AliCPT lensing pipline. For more details, please check out [Ali lensing paper 2022](https://arxiv.org/abs/2204.08158).
 
 To run the code, please first check out *constant.py* and setup your library file path, output directory, dataset information and so on. There is a integrated shell script *one.sh* for this pipeline, which you can run through:
@@ -48,7 +48,7 @@ After that, you can run *plot.py* and start the reconstruction of the lensing po
 
 After the reconstruction process finish, there will be several graphic outputs in the ALILENS directory, among which the  *recon_cl.pdf*  is the power spectrum output and *recon_snr.pdf* is the SNR for each ell bins. Meanwhile, you can run *product.py* and then *klmplot.py* to get a weiner filtered reconstruction potential map as well as the potnetial map input for conparison, I strongly recommand you check this reconstruction potentail map to see if the reconstruction process is carried out correctly.
 
-#### SCRIPTS
+### SCRIPTS
 
 - *sims.py*: alicpt lensing simulation script use Julien's lenspyx.
         
@@ -61,7 +61,7 @@ After the reconstruction process finish, there will be several graphic outputs i
 - *klmplot.py*: delensing estimation pipeline. Out put will be all.pdf for CIB-lensing cross delensing and internal.pdf for internal delensing. The data for these curves in the pdf will be saved in folder ../primordial/.
 
 - *product.py*: generate reconstruction klm and semi-analytical n0 nlkk.
-### 2023 version
+# 2023 version
 This is the 2023 version of AliCPT lensing pipline. For more details, please check out [Ali lensing paper 2023](https://arxiv.org/abs/2303.05705).
 
 To run the code, please first check out *constant.py* and setup your library file path, output directory, dataset information and so on. There is a integrated shell script *one.sh* for this pipeline, which you can run through:
@@ -82,7 +82,7 @@ And finally, you can produce lensing reconstruction results using *plot.py* and 
 
 If you want to test the delensning efficiency of your reconstruction results, there is *delensing.py* which can be used to estimate the results through CIB internal delensing and CIB-lensing cross delensing. You must provide a reconstruction potential map befroe you run the delensing estimation, which can be caculated using *klmplot.py*.
 
-#### SCRIPTS
+### SCRIPTS
 
 - *sims.py*: alicpt lensing simulation script use Julien's lenspyx.
         
@@ -101,3 +101,10 @@ If you want to test the delensning efficiency of your reconstruction results, th
 - *delensing.py*: delensing estimation pipeline. Out put will be all.pdf for CIB-lensing cross delensing and internal.pdf for internal delensing. The data for these curves in the pdf will be saved in folder ../primordial/.
 - *product.py*: generate reconstruction klm and semi-analytical n0 nlkk.
 - *klmplot.py*: delensing estimation pipeline. Out put will be all.pdf for CIB-lensing cross delensing and internal.pdf for internal delensing. The data for these curves in the pdf will be saved in folder ../primordial/.
+
+# Contact
+
+If you have comments, questions, or feedback, please
+[contact us](bhu@bnu.edu.cn).
+
+The current lead of the AliCPT lensing Team is Bin Hu ([Personal Homepage](https://hubinitp.github.io/)).
