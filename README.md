@@ -21,9 +21,16 @@ This code contains most of the AliCPT lensing reconstruction pipeline (see Ali l
 ### 2022 version
 This is the 2022 version of AliCPT lensing pipline. For more details, please check out [Ali lensing paper 2022](https://arxiv.org/abs/2204.08158).
 
-To run the code, please first check out *constant.py* and setup your library file path, output directory, dataset information and so on.
+To run the code, please first check out *constant.py* and setup your library file path, output directory, dataset information and so on. There is a integrated shell script *one.sh* for this pipeline, which you can run through:
 
-Then, run *sims.py* to generate a serial of data sets containing lensed CMB signals and inhomogeneous instrumental noises. The lensed CMB signals is calculated using planck FPP potential power spectrum and unlensed TEB CMB signal power spectrum. THe inhomogeneous intrumental noises is generated based on AliCPT noise variance map. A inverse variance filter will be calculated simultaneously.
+```
+  chmod +x one.sh
+  
+  ./one.sh
+```
+
+
+Also, you can use seperated python files. Run *sims.py* to generate a serial of data sets containing lensed CMB signals and inhomogeneous instrumental noises. The lensed CMB signals is calculated using planck FPP potential power spectrum and unlensed TEB CMB signal power spectrum. THe inhomogeneous intrumental noises is generated based on AliCPT noise variance map. A inverse variance filter will be calculated simultaneously.
 
 After that, you can run *plot.py* and start the reconstruction of the lensing potential based on the dataset generated in the previous step.
 
@@ -45,9 +52,15 @@ After the reconstruction process finish, there will be several graphic outputs i
 ### 2023 version
 This is the 2023 version of AliCPT lensing pipline. For more details, please check out [Ali lensing paper 2023](https://arxiv.org/abs/2303.05705).
 
-To run the code, please first check out *constant.py* and setup your library file path, output directory, dataset information and so on.
+To run the code, please first check out *constant.py* and setup your library file path, output directory, dataset information and so on. There is a integrated shell script *one.sh* for this pipeline, which you can run through:
 
-Then you can run *transfer.py* to which transfer the pre-existing TEB dataset (CMB maps after foreground removing through ILC method) to TQU maps.
+```
+  chmod +x one.sh
+  
+  ./one.sh
+```
+
+Also, you can use seperated python files. You can run *transfer.py* to which transfer the pre-existing TEB dataset (CMB maps after foreground removing through ILC method) to TQU maps.
 
 After that, I recommend you to run *sims.py* and *cal_cinv.py*, which will genrate realizaions of CMB signal and calculate inverse variance map respectively.
 
