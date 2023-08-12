@@ -88,3 +88,4 @@ If you want to test the delensning efficiency of your reconstruction results, th
 
 - *delensing.py*: delensing estimation pipeline. Out put will be all.pdf for CIB-lensing cross delensing and internal.pdf for internal delensing. The data for these curves in the pdf will be saved in folder ../primordial/.
 - *product.py*: generate reconstruction klm and semi-analytical n0 nlkk.
+- *klmplot.py*: delensing estimation pipeline. Out put will be all.pdf for CIB-lensing cross delensing and internal.pdf for internal delensing. The data for these curves in the pdf will be saved in folder ../primordial/.
