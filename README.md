@@ -74,4 +74,4 @@ If you want to test the delensning efficiency of your reconstruction results, th
 - *cal_cinv.py*: calculate the inverse variance map to be used for inverse-variance filter
 
 - *delensing.py*: delensing estimation pipeline. Out put will be all.pdf for CIB-lensing cross delensing and internal.pdf for internal delensing. The data for these curves in the pdf will be saved in folder ../primordial/.
-- - *product.py*: generate reconstruction klm and semi-analytical n0 nlkk.
+- *product.py*: generate reconstruction klm and semi-analytical n0 nlkk.
