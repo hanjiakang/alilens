@@ -1,7 +1,11 @@
 ### 2022 version
 This is the 2022 version of AliCPT lensing pipline. For more details, please check out [Ali lensing paper 2022](https://arxiv.org/abs/2204.08158).
 
-To run the code, To run the code, please first check out *constant.py* and setup your library file path, output directory, dataset information and so on.
+To run the code, please first check out *constant.py* and setup your library file path, output directory, dataset information and so on. There is a integrated shell script *one.sh* for this pipeline, which you can run through:
+
+  chmod +x one.sh
+  ./one.sh
+
 
 Then, run *sims.py* to generate a serial of data sets containing lensed CMB signals and inhomogeneous instrumental noises. The lensed CMB signals is calculated using planck FPP potential power spectrum and unlensed TEB CMB signal power spectrum. THe inhomogeneous intrumental noises is generated based on AliCPT noise variance map. A inverse variance filter will be calculated simultaneously.
 
