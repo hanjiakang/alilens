@@ -1,7 +1,7 @@
 ### 2022 version
 This is the 2022 version of AliCPT lensing pipline. For more details, please check out [Ali lensing paper 2022](https://arxiv.org/abs/2204.08158).
 
-To run the code, please first check out *constant.py* and setup your library file path, output directory, dataset information and so on. There is a integrated shell script *one.sh* for this pipeline, which you can run through:
+To run the code, please first check out *library_parameter.py* and setup your library file path, output directory, dataset information and so on. There is a integrated shell script *one.sh* for this pipeline, which you can run through:
 
 ```
   chmod +x one.sh
