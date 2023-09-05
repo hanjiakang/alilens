@@ -13,7 +13,7 @@ import argparse
 sys.path.insert(0, './')
 from one import *
 from utils import uKamin2uKpix, bl_eft, bl, apodize_mask
-from constant import *
+from library_parameter import *
 
 parser = argparse.ArgumentParser(description='Simulation for AliCPT Lensing')
 parser.add_argument('-np', dest='np', type=int, default=1, help='Number of processes')
