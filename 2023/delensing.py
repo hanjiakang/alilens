@@ -12,7 +12,7 @@ import lenspyx
 from lenspyx.utils import camb_clfile
 import healpy as hp, numpy as np
 import copy
-from constant import *
+from library_parameter import *
 
 mask=hp.read_map(mask_bb)
 maske=hp.read_map(mask_apodiz)
