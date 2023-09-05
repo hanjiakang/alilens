@@ -9,7 +9,7 @@ import argparse
 sys.path.insert(0, './')
 from one import *
 from utils import uKamin2uKpix, bl_eft, bl, apodize_mask
-from constant import *
+from library_parameter import *
 
 apomask=hp.read_map(mask_apodiz,field=0)
 parser = argparse.ArgumentParser(description='Simulation for AliCPT Lensing')
