@@ -13,7 +13,7 @@ import argparse
 
 sys.path.insert(0, './')
 from one import *
-from constant import *
+from library_parameter import *
 from utils import uKamin2uKpix, bl_eft, bl, apodize_mask
 
 
