@@ -50,10 +50,13 @@ def lensed_cmbs(cls, nside, savePath, fwhm_f=[], nrms_f=None, lmax=4096, dlmax=1
     # NOTE we only consider lensing induced E->B modes
     
     # Lensed TQU maps
-    Tlen = lenspyx.alm2lenmap(tlm_unl, [dlm, None], nside, facres=facres, verbose=False)
-    Qlen, Ulen = lenspyx.alm2lenmap_spin([elm_unl, None], [dlm, None], nside, 2, facres=facres, verbose=False)
-    tlm_len = hp.map2alm(Tlen, lmax=lmax)
-    elm_len, blm_len = hp.map2alm_spin([Qlen, Ulen], 2, lmax=lmax)
+ geom_info = ('healpix', {'nside':nside}) 
+    Tlen = lenspyx.lensing.alm2lenmap(tlm_unl, dlm,  geometry=geom_info, verbose=False)
+    #Tlen = lenspyx.alm2lenmap(tlm_unl, [dlm, None], nside, facres=facres, verbose=False)
+    #Qlen, Ulen = lenspyx.alm2lenmap_spin([elm_unl, None], [dlm, None], nside, 2, geometry=geom_info, verbose=False)   #######################这里为啥不能用alm2lenmap
+    Qlen, Ulen = lenspyx.lensing.alm2lenmap_spin(elm_unl, dlm, 2, geometry=geom_info, verbose=False)
+    tlm_len = hp.map2alm(Tlen, lmax=lmax)
+    elm_len, blm_len = hp.map2alm_spin([Qlen, Ulen], 2, lmax=lmax)
     
     # Convolution with transfer function
     Tlen = hp.alm2map(hp.almxfl(tlm_len, transf, inplace=True), nside, verbose=False)
