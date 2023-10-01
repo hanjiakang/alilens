@@ -53,7 +53,7 @@ def lensed_cmbs(cls, nside, savePath, fwhm_f=[], nrms_f=None, lmax=4096, dlmax=1
  geom_info = ('healpix', {'nside':nside}) 
     Tlen = lenspyx.lensing.alm2lenmap(tlm_unl, dlm,  geometry=geom_info, verbose=False)
     #Tlen = lenspyx.alm2lenmap(tlm_unl, [dlm, None], nside, facres=facres, verbose=False)
-    #Qlen, Ulen = lenspyx.alm2lenmap_spin([elm_unl, None], [dlm, None], nside, 2, geometry=geom_info, verbose=False)   #######################这里为啥不能用alm2lenmap
+    #Qlen, Ulen = lenspyx.alm2lenmap_spin([elm_unl, None], [dlm, None], nside, 2, geometry=geom_info, verbose=False)  
     Qlen, Ulen = lenspyx.lensing.alm2lenmap_spin(elm_unl, dlm, 2, geometry=geom_info, verbose=False)
     tlm_len = hp.map2alm(Tlen, lmax=lmax)
     elm_len, blm_len = hp.map2alm_spin([Qlen, Ulen], 2, lmax=lmax)
