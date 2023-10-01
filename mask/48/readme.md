@@ -1,1 +1,1 @@
-48 module vairance map
+48 module noise vairance map
