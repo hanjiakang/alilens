@@ -68,7 +68,7 @@ wiener_dat = np.loadtxt(os.path.join(ALILENS, 'products/COM_Lensing_Inhf_2048_R1
 wiener = (wiener_dat[2] - wiener_dat[1]) * utils.cli(wiener_dat[2])
 
 # input deflection map
-qlm_input = hp.map2alm(hp.read_map(os.path.join(ALILENS, 'sims/cmbs/map_P_1024_0049.fits')))
+qlm_input = hp.map2alm(hp.read_map(os.path.join(ALILENS, 'sims/cmbs/map_TQU_%d_%04d.fits'%(2048,nsims))))
 dlm_input = hp.almxfl(qlm_input, cut * q2d(np.arange(lmax + 1)))
 dmap_input = hp.alm2map(dlm_input, nside=1024)
 
