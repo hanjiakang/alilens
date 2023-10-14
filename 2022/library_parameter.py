@@ -36,10 +36,12 @@ nwidth=22 # the width of each gourp (how many sets in each group) p.s. as the se
 #library that you store your teb maps as well as your finel recontruction results
 
 #library that you store your teb maps as well as your final recontruction results
-lib_cls_res='/disk1/home/hanjk/2022/runs-48/noise_residuals/TEnilc-Bcilc_proj-noise_11arcmin_sim%d.fits'
-lib_cls_noise='/disk1/home/hanjk/2022/runs-48/total_residuals/tot-residual_TEnilc-Bcilc_11arcmin_sim%d.fits'
+lib_cls_res='/disk1/home/hanjk/2022/runs-48/noise_residuals/TEnilc-Bcilc_proj-noise_11arcmin_sim%d.fits' #the library directory storing detection noise residue maps
+lib_cls_noise='/disk1/home/hanjk/2022/runs-48/total_residuals/tot-residual_TEnilc-Bcilc_11arcmin_sim%d.fits' 
+#the library directory storing total residue maps which is the summation of the detection noise residue maps and foreground residue maps
 #lib_cls_con='/disk1/home/hanjk/2022/runs/total_residuals/tot-residual_TEnilc-Bcilc_11arcmin_sim%02d.fits'
 lib_cls_con='/disk1/home/hanjk/2022/runs-48/total_residuals/tot-residual_TEnilc-Bcilc_11arcmin_sim%d.fits'
+#the noise maps which are used to caculate inverse variance map
 
 #the one set of teb noise map to be used in delensing estimation
 lib_Ali_map_noise="/disk1/home/hanjk/2022/runs-48/total_residuals/tot-residual_TEnilc-Bcilc_11arcmin_sim198.fits"
